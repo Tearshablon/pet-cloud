@@ -1,4 +1,5 @@
 rootProject.name = 'fccr-app'
 
 include 'fccr-registry'
+include 'fccr-db'
 
