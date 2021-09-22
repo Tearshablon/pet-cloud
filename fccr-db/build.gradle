@@ -22,3 +22,50 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-starter-jdbc'
 }
+
+def fileName = 'db-master-changelog.yml'
+def dbRunList = ''
+def dbDataDriver = ''
+def dbDataUrl = ''
+def dbDataUser = ''
+def dbDataPassword = ''
+
+if (env == 'dev') {
+    file("src/main/resources/changesets/liquibase-local.properties").withReader {
+        Properties lbProperties = new Properties()
+        lbProperties.load(it)
+        dbDataDriver = "${lbProperties.driver}"
+        dbDataUrl = "${lbProperties.url}"
+        dbDataUser = "${lbProperties.username}"
+        dbDataPassword = "${lbProperties.password}"
+    }
+} else {
+    dbDataDriver = 'org.postgresql.Driver'
+    dbDataUrl = project.hasProperty('dbDataUrl') ? project.getProperty('dbDataUrl') : ''
+    dbDataUser = project.hasProperty('dbDataUser') ? project.getProperty('dbDataUser') : ''
+    dbDataPassword = project.hasProperty('dbDataPassword') ? project.getProperty('dbDataPassword') : ''
+}
+
+liquibase {
+    activities {
+        script {
+            changeLogFile 'src/main/resources/changesets/' + fileName
+            driver dbDataDriver
+            url dbDataUrl
+            username dbDataUser
+            password dbDataPassword
+        }
+    }
+    runList = dbRunList
+}
+
+task dropDB() {
+    doFirst {
+        println "dbDataUrl: " + dbDataUrl
+        println "fileName: " + fileName
+    }
+    doLast {
+        liquibase.runList = 'script'
+        finalizedBy(tasks.dropAll)
+    }
+}

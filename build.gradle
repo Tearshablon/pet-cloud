@@ -8,6 +8,7 @@ buildscript {
         springDependencyManagementVersion = '1.0.8.RELEASE'
         liquibasePluginVersion = '1.2.4'
         liquibaseCoreVersion = '3.5.5'
+        postgresDriverVersion = '42.2.5'
     }
 
     repositories {
@@ -24,6 +25,7 @@ buildscript {
             exclude group: 'org.liquibase', module: 'liquibase-core'
         }
         classpath "org.liquibase:liquibase-core:${liquibaseCoreVersion}"
+        classpath "org.postgresql:postgresql:$postgresDriverVersion"
     }
 }
 
