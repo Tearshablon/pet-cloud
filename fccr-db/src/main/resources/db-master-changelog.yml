@@ -1,3 +1,5 @@
 databaseChangeLog:
   - include:
-      file: changesets/db-master-changelog.yml
+      file: changesets/object/db-master-changelog.yml
+  - include:
+      file: changesets/data/dev/db-master-changelog.yml

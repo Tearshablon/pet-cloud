@@ -58,14 +58,3 @@ liquibase {
     }
     runList = dbRunList
 }
-
-task dropDB() {
-    doFirst {
-        println "dbDataUrl: " + dbDataUrl
-        println "fileName: " + fileName
-    }
-    doLast {
-        liquibase.runList = 'script'
-        finalizedBy(tasks.dropAll)
-    }
-}

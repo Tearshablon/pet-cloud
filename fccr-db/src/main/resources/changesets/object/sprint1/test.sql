@@ -1,4 +1,4 @@
---liquibase formatted sql logicalFilePath:changesets/sprint1
+--liquibase formatted sql logicalFilePath:changesets/object/sprint1
 
 --changeSet dshablov:test-01
 create sequence fccr.test_s;

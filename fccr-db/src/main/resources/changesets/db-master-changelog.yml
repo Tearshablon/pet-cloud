@@ -3,5 +3,8 @@ databaseChangeLog:
       file: db-changelog-schemas.sql
       relativeToChangelogFile: true
   - include:
-      file: sprint1/sprint1-db-changelog.yml
+      file: /object/sprint1/sprint1-db-changelog.yml
+      relativeToChangelogFile: true
+  - include:
+      file: /data/dev/sprint1/sprint1-db-changelog.yml
       relativeToChangelogFile: true
