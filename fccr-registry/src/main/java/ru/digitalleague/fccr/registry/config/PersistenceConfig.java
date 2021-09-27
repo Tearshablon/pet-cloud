@@ -1,4 +1,4 @@
-package ru.digitallegua.fccr.registry.config;
+package ru.digitalleague.fccr.registry.config;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
@@ -17,7 +17,7 @@ import java.util.Properties;
 
 @Configuration
 @RequiredArgsConstructor
-@EnableJpaRepositories(basePackages = {"ru.digitallegua.fccr.registry.db.repository"})
+@EnableJpaRepositories(basePackages = {"ru.digitalleague.fccr.registry.db.repository"})
 @EnableTransactionManagement
 public class PersistenceConfig {
 
@@ -58,7 +58,7 @@ public class PersistenceConfig {
         vendorAdapter.setShowSql(true);
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setJpaVendorAdapter(vendorAdapter);
-        factory.setPackagesToScan("ru.digitallegua.fccr.registry.db.entity");
+        factory.setPackagesToScan("ru.digitalleague.fccr.registry.db.entity");
         factory.setDataSource(dataSource());
         factory.setJpaProperties(hibernateSpecificProperties());
         return factory;

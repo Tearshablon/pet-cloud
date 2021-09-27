@@ -1,7 +1,7 @@
-package ru.digitallegua.fccr.registry.service;
+package ru.digitalleague.fccr.registry.service;
 
 import org.springframework.stereotype.Service;
-import ru.digitallegua.fccr.registry.api.GreetingService;
+import ru.digitalleague.fccr.registry.api.GreetingService;
 
 @Service
 public class DefaultGreetingService implements GreetingService {

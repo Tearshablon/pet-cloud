@@ -21,7 +21,7 @@
         </encoder>
     </appender>
 
-    <logger name="ru.digitallegua.fccr" level="DEBUG"/>
+    <logger name="ru.digitalleague.fccr" level="DEBUG"/>
 
     <root>
         <level value="INFO"/>

@@ -1,4 +1,4 @@
-package ru.digitallegua.fccr.registry.api;
+package ru.digitalleague.fccr.registry.api;
 
 public interface GreetingService {
 

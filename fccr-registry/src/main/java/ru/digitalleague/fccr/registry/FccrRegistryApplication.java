@@ -1,4 +1,4 @@
-package ru.digitallegua.fccr.registry;
+package ru.digitalleague.fccr.registry;
 
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
