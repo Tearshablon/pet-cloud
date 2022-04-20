@@ -1,6 +1,6 @@
 rootProject.name = 'java-template'
 
-include 'fccr-registry'
-include 'fccr-db'
-include 'fccr-common'
+include 'registry'
+include 'db'
+include 'common'
 
