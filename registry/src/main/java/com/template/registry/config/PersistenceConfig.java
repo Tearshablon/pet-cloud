@@ -1,4 +1,4 @@
-package ru.digitalleague.fccr.registry.config;
+package com.template.registry.config;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

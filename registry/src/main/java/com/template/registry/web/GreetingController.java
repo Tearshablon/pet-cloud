@@ -1,9 +1,9 @@
-package ru.digitalleague.fccr.registry.web;
+package com.template.registry.web;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.digitalleague.fccr.registry.api.GreetingService;
+import com.template.registry.api.GreetingService;
 
 @RestController
 @RequiredArgsConstructor

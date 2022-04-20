@@ -1,4 +1,4 @@
-package ru.digitalleague.fccr.db;
+package com.template.db;
 
 import liquibase.integration.spring.SpringLiquibase;
 import org.springframework.beans.factory.annotation.Autowired;

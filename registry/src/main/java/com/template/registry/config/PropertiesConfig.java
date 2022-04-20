@@ -1,4 +1,4 @@
-package ru.digitalleague.fccr.registry.config;
+package com.template.registry.config;
 
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;
