@@ -17,23 +17,11 @@ processResources {
     }
 }
 
-
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-task upRegistry(type: Exec) {
-    group = "docker"
-    commandLine 'docker-compose', '-f', rootProject.projectDir.path + '/docker-compose.yml', 'up', '-d', 'postgresql', 'fccr-registry'
-}
-
-task downRegistry(type: Exec) {
-    group = "docker"
-    commandLine 'docker-compose', 'rm', '-f', '-s', "postgresql", 'fccr-registry'
-}
-
-task buildAndStartRegistry(dependsOn: ['downRegistry', 'clean', 'build', 'upRegistry'])
 
 dependencies {
     compile 'org.slf4j:slf4j-api'

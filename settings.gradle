@@ -3,4 +3,4 @@ rootProject.name = 'java-template'
 include 'registry'
 include 'db'
 include 'common'
-
+include 'eureka'
