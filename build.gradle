@@ -4,7 +4,7 @@ version '1.0-SNAPSHOT'
 
 buildscript {
     ext {
-        springBootVersion = '2.2.4.RELEASE'
+        springBootVersion = '2.6.6'
         springDependencyManagementVersion = '1.0.8.RELEASE'
         liquibasePluginVersion = '1.2.4'
         liquibaseCoreVersion = '3.5.5'
