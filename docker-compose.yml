@@ -29,3 +29,15 @@ services:
     depends_on:
       postgresql:
         condition: service_healthy
+
+  eureka:
+    container_name: eureka
+    build: eureka
+    image: eureka
+    ports:
+      - 8761:8761
+    environment:
+      TZ: Europe/Moscow
+    depends_on:
+      postgresql:
+        condition: service_healthy
