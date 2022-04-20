@@ -1,4 +1,0 @@
-databaseChangeLog:
-  - include:
-      file: sprint1/sprint1-db-changelog.yml
-      relativeToChangelogFile: true

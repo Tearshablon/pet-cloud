@@ -1,8 +1,6 @@
-rootProject.name = 'fccr-app'
+rootProject.name = 'java-template'
 
 include 'fccr-registry'
 include 'fccr-db'
-include 'fccr-ui'
-include 'fccr-test'
 include 'fccr-common'
 
