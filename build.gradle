@@ -46,6 +46,8 @@ ext {
     javaxPersistenceVersion = '2.2'
     tomcatVersion = '2.5.4'
     eurekaVersion = '3.1.1'
+    actuatorVersion = '2.6.6'
+    bootstrapVersion = '3.0.1'
 }
 
 def defaultEncoding = 'UTF-8'
@@ -72,10 +74,6 @@ subprojects {
     configurations {
         compileOnly {
             extendsFrom annotationProcessor
-        }
-        compile {
-            exclude module: 'spring-boot-starter-reactor-netty'
-            exclude group: 'io.netty'
         }
     }
 
@@ -112,7 +110,8 @@ subprojects {
             dependency "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
             dependency "org.springframework.boot:spring-boot-starter-tomcat:$tomcatVersion"
             dependency "org.springframework.cloud:spring-cloud-starter-netflix-eureka-server:$eurekaVersion"
-
+            dependency "org.springframework.cloud:spring-cloud-starter-bootstrap:$bootstrapVersion"
+            dependency "org.springframework.boot:spring-boot-starter-actuator:$actuatorVersion"
 
             dependency "org.postgresql:postgresql:$postgresDriverVersion"
             dependency "com.zaxxer:HikariCP:$hikariCPVersion"
