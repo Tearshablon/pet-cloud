@@ -38,6 +38,3 @@ services:
       - 8761:8761
     environment:
       TZ: Europe/Moscow
-    depends_on:
-      postgresql:
-        condition: service_healthy
